@@ -1,0 +1,161 @@
+/* ======================================================================== */ 
+
+ /*                      NOT RELATED TO THE TTUTORIAL                        */
+
+/* ======================================================================== */
+
+*{
+	
+	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	list-style: none;
+
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	list-style: none;
+}
+
+:root {
+  --step--2: clamp(0.69rem, calc(0.58rem + 0.60vw), 1.00rem);
+  --step--1: clamp(0.83rem, calc(0.67rem + 0.81vw), 1.25rem);
+  --step-0: clamp(1.00rem, calc(0.78rem + 1.10vw), 1.56rem);
+  --step-1: clamp(1.20rem, calc(0.91rem + 1.47vw), 1.95rem);
+  --step-2: clamp(1.44rem, calc(1.05rem + 1.95vw), 2.44rem);
+  --step-3: clamp(1.73rem, calc(1.21rem + 2.58vw), 3.05rem);
+  --step-4: clamp(2.07rem, calc(1.39rem + 3.40vw), 3.82rem);
+  --step-5: clamp(2.49rem, calc(1.60rem + 4.45vw), 4.77rem);
+	
+	/* Font style */
+	
+	--ff-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+	
+	/* Color style */
+	
+	--color-primary: #0575E6;
+	--color-secondary: #6dd5ed;
+	--color-primary-light:#8dc6ff;
+	--color-primary-dark:#021B79;
+	--color-error:#cc3333;
+	--color-success:#4bb544;
+	--color-link:#606470;
+	--color-text:#5f6769;
+	--color-header-dark:#393e46;
+	--color-background:#f5f9ee;
+	--color-border-sc:#ececec;
+	--color-border-focus:#69c2ff;
+	--color-border:#d3d6db;
+	--bs:#ffa857;
+	--color-percentage:#5f6769;
+	--color-header-light:#9ba6a5;
+	--color-border-focus:#a9d7f6;
+	--color-input-background:#f5f9ee;
+	--gradient: linear-gradient(135deg var(--color-primary), var(--color-secondary));
+	
+	
+}
+
+
+/* ======================================================================== */ 
+
+ /*                      RELATED TO THE TTUTORIAL                        */
+
+/* ======================================================================== */
+
+
+
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0f0f0f;
+}
+
+button.btn {
+	position: relative;
+	width: 24vw;
+	height: 13vh;
+	background-color: #444;
+	display: inline-block;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+span {
+	display: block;
+	color: orange;
+	font-size: var(--step-0);
+	font-weight: 500;
+	padding: 30px 80px;
+}
+
+button.btn::before {
+	top: 0;
+	left: 0;
+	transition-duration: .4s;
+}
+
+button.btn::after {
+	bottom: 0;
+	right: 0;
+	transition-duration: .4s;
+}
+
+span::before {
+	top: 0;
+	left: 0;
+	transition-duration: .4s;
+}
+
+span::after {
+	bottom: 0;
+	right: 0;
+	transition-duration: .4s;
+}
+
+button.btn::before,
+button.btn::after {
+	position: absolute;
+	content: '';
+	width: 3px;
+	height: 0;
+	background: orange;
+	transition-duration: all .3s linear;
+}
+
+span::before,
+span::after {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 2px;
+	background: orange;
+	transition-duration: all .3s linear;
+}
+
+button.btn:hover::before,
+button.btn:hover::after {
+	height: 100%;
+}
+
+button.btn:hover span::before,
+button.btn:hover span::after {
+	width: 100%;
+}

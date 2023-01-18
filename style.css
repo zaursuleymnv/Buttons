@@ -85,8 +85,6 @@ html, body {
 /* ======================================================================== */
 
 
-
-
 .container {
     position: absolute;
     top: 50%;
@@ -94,7 +92,7 @@ html, body {
     translate: -50% -50%;
     width: 90%;
     height: 450px;
-    background: #9c9c9f;
+    background: #bbbbbc;
 }
 
 .container a {

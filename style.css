@@ -101,7 +101,7 @@ html, body {
     left: 50%;
     translate: -50% -50%;
     display: inline-block;
-    padding: 1rem 3.5rem;
+    padding: 1rem 3.3rem;
     color: #fff;
     background: orange;
     font-size: var(--step--1);
